@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Лаба 1 — Калькулятор</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main class="container">
+			<h1>Калькулятор</h1>
+			<div class="calculator">
+				<input
+					id="display"
+					class="display"
+					type="text"
+					inputmode="decimal"
+					placeholder="0"
+					aria-label="дисплей"
+				/>
+
+				<div class="keys" role="group" aria-label="клавиши калькулятора">
+					<button data-action="clear" class="key key-ac">AC</button>
+					<button data-action="sign" class="key">±</button>
+					<button data-action="percent" class="key">%</button>
+					<button data-action="op" data-op="/" class="key key-op">÷</button>
+
+					<button class="key">7</button>
+					<button class="key">8</button>
+					<button class="key">9</button>
+					<button data-action="op" data-op="*" class="key key-op">×</button>
+
+					<button class="key">4</button>
+					<button class="key">5</button>
+					<button class="key">6</button>
+					<button data-action="op" data-op="-" class="key key-op">−</button>
+
+					<button class="key">1</button>
+					<button class="key">2</button>
+					<button class="key">3</button>
+					<button data-action="op" data-op="+" class="key key-op">+</button>
+
+					<button class="key key-zero">0</button>
+					<button class="key">.</button>
+					<button data-action="equals" class="key key-eq">=</button>
+				</div>
+				<div id="error" class="error" role="alert" aria-live="polite"></div>
+			</div>
+		</main>
+		<script src="laba1.js"></script>
+	</body>
+</html>

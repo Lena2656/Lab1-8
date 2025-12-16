@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Список задач</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="app">
+			<header>
+				<h1>Список задач</h1>
+			</header>
+
+			<main>
+				<!-- Поле для добавления задачи -->
+				<div class="add-task">
+					<input
+						type="text"
+						id="taskInput"
+						placeholder="Введите новую задачу..."
+					/>
+					<button onclick="addTask()">Добавить</button>
+				</div>
+
+				<!-- Фильтры -->
+				<div class="filters">
+					<button onclick="filterTasks('all')" class="active">
+						Все задачи
+					</button>
+					<button onclick="filterTasks('active')">Активные</button>
+					<button onclick="filterTasks('completed')">Выполненные</button>
+				</div>
+
+				<!-- Список задач -->
+				<div class="tasks" id="taskList">
+					<!-- Задачи будут появляться здесь -->
+					<div class="empty">Пока нет задач. Добавьте первую!</div>
+				</div>
+
+				<!-- Статистика -->
+				<div class="stats">
+					<div>Всего: <span id="totalCount">0</span></div>
+					<div>Выполнено: <span id="completedCount">0</span></div>
+					<div>Активные: <span id="activeCount">0</span></div>
+				</div>
+
+				<!-- Кнопка очистки -->
+				<button onclick="clearCompleted()" class="clear-btn">
+					Удалить выполненые задачи
+				</button>
+			</main>
+		</div>
+
+		<script src="laba2.js"></script>
+	</body>
+</html>
